@@ -35,12 +35,11 @@
         <script src="js/leaflet.wms.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/_2.js"></script>
-        <script src="data/4_4.js"></script>
+        <script src="data/4_3.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:2
-        }).fitBounds([[8.926475578603098,98.88568811076603],[8.943953028010904,98.91704731172707]]);
+        }).fitBounds([[8.927658180049114,98.88901486810488],[8.932027542401066,98.89685466834516]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -85,136 +84,10 @@
         });
         layer__1;
         map.addLayer(layer__1);
-        function pop__2(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_1'] !== null ? autolinker.link(feature.properties['field_1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_2'] !== null ? autolinker.link(feature.properties['field_2'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_3'] !== null ? autolinker.link(feature.properties['field_3'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_4'] !== null ? autolinker.link(feature.properties['field_4'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_5'] !== null ? autolinker.link(feature.properties['field_5'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_6'] !== null ? autolinker.link(feature.properties['field_6'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_7'] !== null ? autolinker.link(feature.properties['field_7'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_8'] !== null ? autolinker.link(feature.properties['field_8'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_9'] !== null ? autolinker.link(feature.properties['field_9'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_10'] !== null ? autolinker.link(feature.properties['field_10'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_11'] !== null ? autolinker.link(feature.properties['field_11'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_12'] !== null ? autolinker.link(feature.properties['field_12'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_13'] !== null ? autolinker.link(feature.properties['field_13'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_14'] !== null ? autolinker.link(feature.properties['field_14'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_15'] !== null ? autolinker.link(feature.properties['field_15'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_16'] !== null ? autolinker.link(feature.properties['field_16'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lat'] !== null ? autolinker.link(feature.properties['lat'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['long'] !== null ? autolinker.link(feature.properties['long'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_19'] !== null ? autolinker.link(feature.properties['field_19'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_20'] !== null ? autolinker.link(feature.properties['field_20'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_21'] !== null ? autolinker.link(feature.properties['field_21'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_22'] !== null ? autolinker.link(feature.properties['field_22'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_23'] !== null ? autolinker.link(feature.properties['field_23'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_24'] !== null ? autolinker.link(feature.properties['field_24'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_25'] !== null ? autolinker.link(feature.properties['field_25'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_26'] !== null ? autolinker.link(feature.properties['field_26'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_27'] !== null ? autolinker.link(feature.properties['field_27'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['field_28'] !== null ? autolinker.link(feature.properties['field_28'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style__2_0() {
-            return {
-                pane: 'pane__2',
-                radius: 6.0,
-                opacity: 1,
-                color: 'rgba(244,216,0,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(250,255,57,1.0)',
-                interactive: true,
-            }
-        }
         map.createPane('pane__2');
         map.getPane('pane__2').style.zIndex = 402;
-        map.getPane('pane__2').style['mix-blend-mode'] = 'normal';
-        var layer__2 = new L.geoJson(json__2, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json__2',
-            layerName: 'layer__2',
+        var layer__2 = L.WMS.layer("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
             pane: 'pane__2',
-            onEachFeature: pop__2,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style__2_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer__2);
-        map.addLayer(layer__2);
-        map.createPane('pane__3');
-        map.getPane('pane__3').style.zIndex = 403;
-        var layer__3 = L.WMS.layer("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
-            pane: 'pane__3',
             format: 'image/png',
             uppercase: true,
             transparent: true,
@@ -225,8 +98,8 @@
             identify: false,
             attribution: '',
         });
-        map.addLayer(layer__3);
-        function pop_4_4(feature, layer) {
+        map.addLayer(layer__2);
+        function pop_4_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['ลำดับ'] !== null ? autolinker.link(feature.properties['ลำดับ'].toLocaleString()) : '') + '</td>\
@@ -316,9 +189,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_4_4_0() {
+        function style_4_3_0() {
             return {
-                pane: 'pane_4_4',
+                pane: 'pane_4_3',
                 radius: 6.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -332,26 +205,26 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_4_4');
-        map.getPane('pane_4_4').style.zIndex = 404;
-        map.getPane('pane_4_4').style['mix-blend-mode'] = 'normal';
-        var layer_4_4 = new L.geoJson(json_4_4, {
+        map.createPane('pane_4_3');
+        map.getPane('pane_4_3').style.zIndex = 403;
+        map.getPane('pane_4_3').style['mix-blend-mode'] = 'normal';
+        var layer_4_3 = new L.geoJson(json_4_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_4_4',
-            layerName: 'layer_4_4',
-            pane: 'pane_4_4',
-            onEachFeature: pop_4_4,
+            dataVar: 'json_4_3',
+            layerName: 'layer_4_3',
+            pane: 'pane_4_3',
+            onEachFeature: pop_4_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_4_4_0(feature));
+                return L.circleMarker(latlng, style_4_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer_4_4);
-        map.addLayer(layer_4_4);
+        bounds_group.addLayer(layer_4_3);
+        map.addLayer(layer_4_3);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -363,7 +236,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/4_4.png" /> สมาชิก (นส.4)': layer_4_4,"รูปแปลงกรมที่ดิน": layer__3,'<img src="legend/_2.png" /> สมาชิก (สปก)': layer__2,"แผนที่ดาวเทียม": layer__1,"แผนที่ฐาน": layer__0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/4_3.png" /> สมาชิก (นส.4)': layer_4_3,"รูปแปลงกรมที่ดิน": layer__2,"แผนที่ดาวเทียม": layer__1,"แผนที่ฐาน": layer__0,}).addTo(map);
         setBounds();
         </script>
     </body>
